@@ -9,7 +9,7 @@ import io
 app = FastAPI()
 
 # Load the YOLO model (e.g., YOLOv8)
-model = YOLO("yolov8n.pt")  # You can change this to any YOLO model you have
+model = YOLO("./yolov8n.pt")  # You can change this to any YOLO model you have
 
 app = FastAPI()
 
