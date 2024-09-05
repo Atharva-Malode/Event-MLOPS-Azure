@@ -5,11 +5,15 @@ from ultralytics import YOLO
 import cv2
 import numpy as np
 import io
+import os   
 
 app = FastAPI()
 
-# Load the YOLO model (e.g., YOLOv8)
-model = YOLO("./yolov8n.pt")  # You can change this to any YOLO model you have
+# Get the absolute path to the .pt file
+model_path = os.path.join(os.path.dirname(__file__), "yolov8n.pt")
+
+# Load the YOLO model
+model = YOLO(model_path)
 
 app = FastAPI()
 
